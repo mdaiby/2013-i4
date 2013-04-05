@@ -56,6 +56,12 @@ namespace WpfFrenchChampionship
             
             this.matchEditView.DataContext = new ViewModel.MatchViewModel(clubs, ranking);
             this.rankingView.DataContext = new ViewModel.RankingViewModel(ranking);
+            this.matchListView.DataContext = new ViewModel.MatchListViewModel(ranking);
+        }
+
+        private void MatchListView_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

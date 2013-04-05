@@ -21,6 +21,13 @@ namespace WpfFrenchChampionship.ViewModel
         public RankingViewModel(Ranking ranking)
         {
             this._ranking = ranking;
+            this._ranking.NewMatchRegistered += _ranking_NewMatchRegistered; 
+        }
+
+        void _ranking_NewMatchRegistered(object sender, Ranking.MatchRegistrationEventArgs e)
+        {
+            //throw new NotImplementedException();
+            RaisePropertyChanged("RankedClubs");
         }
 
         public IEnumerable<RankedClub> RankedClubs
@@ -36,5 +43,7 @@ namespace WpfFrenchChampionship.ViewModel
                     };
             }
         }
+
+        
     }
 }

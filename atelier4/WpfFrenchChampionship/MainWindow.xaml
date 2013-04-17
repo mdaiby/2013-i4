@@ -1,0 +1,20 @@
+﻿<Window xmlns:my="clr-namespace:WpfFrenchChampionship"  x:Class="WpfFrenchChampionship.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Championnat Français" Height="355" Width="574">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel LastChildFill="True">
+            <Label DockPanel.Dock="Top" HorizontalAlignment="Center">Matchs</Label>
+            <my:MatchEditView DockPanel.Dock="Top" x:Name="matchEditView"/>
+            <my:MatchListView x:Name="matchListView"/>
+        </DockPanel>
+        <GridSplitter Width="2" />
+        <my:RankingView Grid.Column="2" x:Name="rankingView"/>
+    </Grid>
+</Window>

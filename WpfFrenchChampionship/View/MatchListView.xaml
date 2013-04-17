@@ -7,7 +7,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <DockPanel Grid.Column="1" LastChildFill="true">
-            <Label HorizontalContentAlignment="Center" DockPanel.Dock="Top">Classement</Label>
+            <Label HorizontalContentAlignment="Center" DockPanel.Dock="Top">Score</Label>
             <ListView  Style="{StaticResource ctrlSpace}" ItemsSource="{Binding Matches}">
                 <ListView.View>
                     <GridView>
